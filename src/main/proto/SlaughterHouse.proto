@@ -1,0 +1,38 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "via.pro3.grpc.slaughterhouse";
+
+package slaughterhouse;
+service SlaughterHouse
+{
+  rpc totalProductWeight(stream AnimalPart) returns (Product) {}
+}
+
+message Animal
+{
+  string id = 1;
+  double weight = 2;
+  string type = 3;
+}
+
+message AnimalPart
+{
+  string animal_id = 1;
+  double weight = 2;
+  string type_part = 3;
+  string id = 4;
+}
+
+message Tray
+{
+  double max_weight = 1;
+  repeated AnimalPart animal_parts = 2;
+  string id = 3;
+}
+
+message Product
+{
+  string tray_id = 1;
+  string part_id = 2;
+}
