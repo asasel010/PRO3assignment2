@@ -1,0 +1,19 @@
+package org.example.database;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+public class DatabaseConnection
+{
+    DatabaseConnection() throws SQLException
+    {
+        DriverManager.registerDriver(new org.postgresql.Driver());
+    }
+
+    Connection getConnection() throws SQLException
+    {
+        return DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres?currentSchema=pokersep",
+            "postgres", "dupa123");
+    }
+}
