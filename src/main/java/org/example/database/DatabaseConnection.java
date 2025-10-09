@@ -12,12 +12,11 @@ public class DatabaseConnection
         DriverManager.registerDriver(new org.postgresql.Driver());
     }
 
-    Connection getConnection() throws SQLException
+    public Connection getConnection() throws SQLException
     {
         return DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres?currentSchema=slaughter_house",
             "postgres", "DataBase2025");
     }
-
 
     public static DatabaseConnection getInstance() throws SQLException {
         if (instance == null) {
