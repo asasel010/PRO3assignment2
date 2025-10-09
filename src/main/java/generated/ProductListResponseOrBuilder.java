@@ -3,7 +3,7 @@
 // source: SlaughterHouse.proto
 // Protobuf Java Version: 4.32.0
 
-package via.pro3.grpc.generated;
+package generated;
 
 @com.google.protobuf.Generated
 public interface ProductListResponseOrBuilder extends
@@ -13,12 +13,12 @@ public interface ProductListResponseOrBuilder extends
   /**
    * <code>repeated .slaughterhouse.Product products = 1;</code>
    */
-  java.util.List<via.pro3.grpc.generated.Product> 
+  java.util.List<generated.Product> 
       getProductsList();
   /**
    * <code>repeated .slaughterhouse.Product products = 1;</code>
    */
-  via.pro3.grpc.generated.Product getProducts(int index);
+  generated.Product getProducts(int index);
   /**
    * <code>repeated .slaughterhouse.Product products = 1;</code>
    */
@@ -26,11 +26,11 @@ public interface ProductListResponseOrBuilder extends
   /**
    * <code>repeated .slaughterhouse.Product products = 1;</code>
    */
-  java.util.List<? extends via.pro3.grpc.generated.ProductOrBuilder> 
+  java.util.List<? extends generated.ProductOrBuilder> 
       getProductsOrBuilderList();
   /**
    * <code>repeated .slaughterhouse.Product products = 1;</code>
    */
-  via.pro3.grpc.generated.ProductOrBuilder getProductsOrBuilder(
+  generated.ProductOrBuilder getProductsOrBuilder(
       int index);
 }

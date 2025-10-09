@@ -3,7 +3,7 @@
 // source: SlaughterHouse.proto
 // Protobuf Java Version: 4.32.0
 
-package via.pro3.grpc.generated;
+package generated;
 
 /**
  * Protobuf type {@code slaughterhouse.AnimalListResponse}
@@ -33,32 +33,32 @@ private static final long serialVersionUID = 0L;
 
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return via.pro3.grpc.generated.SlaughterHouseOuterClass.internal_static_slaughterhouse_AnimalListResponse_descriptor;
+    return generated.SlaughterHouseOuterClass.internal_static_slaughterhouse_AnimalListResponse_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return via.pro3.grpc.generated.SlaughterHouseOuterClass.internal_static_slaughterhouse_AnimalListResponse_fieldAccessorTable
+    return generated.SlaughterHouseOuterClass.internal_static_slaughterhouse_AnimalListResponse_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            via.pro3.grpc.generated.AnimalListResponse.class, via.pro3.grpc.generated.AnimalListResponse.Builder.class);
+            generated.AnimalListResponse.class, generated.AnimalListResponse.Builder.class);
   }
 
   public static final int ANIMALS_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
-  private java.util.List<via.pro3.grpc.generated.Animal> animals_;
+  private java.util.List<generated.Animal> animals_;
   /**
    * <code>repeated .slaughterhouse.Animal animals = 1;</code>
    */
   @java.lang.Override
-  public java.util.List<via.pro3.grpc.generated.Animal> getAnimalsList() {
+  public java.util.List<generated.Animal> getAnimalsList() {
     return animals_;
   }
   /**
    * <code>repeated .slaughterhouse.Animal animals = 1;</code>
    */
   @java.lang.Override
-  public java.util.List<? extends via.pro3.grpc.generated.AnimalOrBuilder> 
+  public java.util.List<? extends generated.AnimalOrBuilder> 
       getAnimalsOrBuilderList() {
     return animals_;
   }
@@ -73,14 +73,14 @@ private static final long serialVersionUID = 0L;
    * <code>repeated .slaughterhouse.Animal animals = 1;</code>
    */
   @java.lang.Override
-  public via.pro3.grpc.generated.Animal getAnimals(int index) {
+  public generated.Animal getAnimals(int index) {
     return animals_.get(index);
   }
   /**
    * <code>repeated .slaughterhouse.Animal animals = 1;</code>
    */
   @java.lang.Override
-  public via.pro3.grpc.generated.AnimalOrBuilder getAnimalsOrBuilder(
+  public generated.AnimalOrBuilder getAnimalsOrBuilder(
       int index) {
     return animals_.get(index);
   }
@@ -125,10 +125,10 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof via.pro3.grpc.generated.AnimalListResponse)) {
+    if (!(obj instanceof generated.AnimalListResponse)) {
       return super.equals(obj);
     }
-    via.pro3.grpc.generated.AnimalListResponse other = (via.pro3.grpc.generated.AnimalListResponse) obj;
+    generated.AnimalListResponse other = (generated.AnimalListResponse) obj;
 
     if (!getAnimalsList()
         .equals(other.getAnimalsList())) return false;
@@ -152,44 +152,44 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static via.pro3.grpc.generated.AnimalListResponse parseFrom(
+  public static generated.AnimalListResponse parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static via.pro3.grpc.generated.AnimalListResponse parseFrom(
+  public static generated.AnimalListResponse parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static via.pro3.grpc.generated.AnimalListResponse parseFrom(
+  public static generated.AnimalListResponse parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static via.pro3.grpc.generated.AnimalListResponse parseFrom(
+  public static generated.AnimalListResponse parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static via.pro3.grpc.generated.AnimalListResponse parseFrom(byte[] data)
+  public static generated.AnimalListResponse parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static via.pro3.grpc.generated.AnimalListResponse parseFrom(
+  public static generated.AnimalListResponse parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static via.pro3.grpc.generated.AnimalListResponse parseFrom(java.io.InputStream input)
+  public static generated.AnimalListResponse parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessage
         .parseWithIOException(PARSER, input);
   }
-  public static via.pro3.grpc.generated.AnimalListResponse parseFrom(
+  public static generated.AnimalListResponse parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -197,26 +197,26 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static via.pro3.grpc.generated.AnimalListResponse parseDelimitedFrom(java.io.InputStream input)
+  public static generated.AnimalListResponse parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessage
         .parseDelimitedWithIOException(PARSER, input);
   }
 
-  public static via.pro3.grpc.generated.AnimalListResponse parseDelimitedFrom(
+  public static generated.AnimalListResponse parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessage
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static via.pro3.grpc.generated.AnimalListResponse parseFrom(
+  public static generated.AnimalListResponse parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessage
         .parseWithIOException(PARSER, input);
   }
-  public static via.pro3.grpc.generated.AnimalListResponse parseFrom(
+  public static generated.AnimalListResponse parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -229,7 +229,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(via.pro3.grpc.generated.AnimalListResponse prototype) {
+  public static Builder newBuilder(generated.AnimalListResponse prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -250,21 +250,21 @@ private static final long serialVersionUID = 0L;
   public static final class Builder extends
       com.google.protobuf.GeneratedMessage.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:slaughterhouse.AnimalListResponse)
-      via.pro3.grpc.generated.AnimalListResponseOrBuilder {
+      generated.AnimalListResponseOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return via.pro3.grpc.generated.SlaughterHouseOuterClass.internal_static_slaughterhouse_AnimalListResponse_descriptor;
+      return generated.SlaughterHouseOuterClass.internal_static_slaughterhouse_AnimalListResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return via.pro3.grpc.generated.SlaughterHouseOuterClass.internal_static_slaughterhouse_AnimalListResponse_fieldAccessorTable
+      return generated.SlaughterHouseOuterClass.internal_static_slaughterhouse_AnimalListResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              via.pro3.grpc.generated.AnimalListResponse.class, via.pro3.grpc.generated.AnimalListResponse.Builder.class);
+              generated.AnimalListResponse.class, generated.AnimalListResponse.Builder.class);
     }
 
-    // Construct using via.pro3.grpc.generated.AnimalListResponse.newBuilder()
+    // Construct using generated.AnimalListResponse.newBuilder()
     private Builder() {
 
     }
@@ -291,17 +291,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return via.pro3.grpc.generated.SlaughterHouseOuterClass.internal_static_slaughterhouse_AnimalListResponse_descriptor;
+      return generated.SlaughterHouseOuterClass.internal_static_slaughterhouse_AnimalListResponse_descriptor;
     }
 
     @java.lang.Override
-    public via.pro3.grpc.generated.AnimalListResponse getDefaultInstanceForType() {
-      return via.pro3.grpc.generated.AnimalListResponse.getDefaultInstance();
+    public generated.AnimalListResponse getDefaultInstanceForType() {
+      return generated.AnimalListResponse.getDefaultInstance();
     }
 
     @java.lang.Override
-    public via.pro3.grpc.generated.AnimalListResponse build() {
-      via.pro3.grpc.generated.AnimalListResponse result = buildPartial();
+    public generated.AnimalListResponse build() {
+      generated.AnimalListResponse result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -309,15 +309,15 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public via.pro3.grpc.generated.AnimalListResponse buildPartial() {
-      via.pro3.grpc.generated.AnimalListResponse result = new via.pro3.grpc.generated.AnimalListResponse(this);
+    public generated.AnimalListResponse buildPartial() {
+      generated.AnimalListResponse result = new generated.AnimalListResponse(this);
       buildPartialRepeatedFields(result);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
-    private void buildPartialRepeatedFields(via.pro3.grpc.generated.AnimalListResponse result) {
+    private void buildPartialRepeatedFields(generated.AnimalListResponse result) {
       if (animalsBuilder_ == null) {
         if (((bitField0_ & 0x00000001) != 0)) {
           animals_ = java.util.Collections.unmodifiableList(animals_);
@@ -329,22 +329,22 @@ private static final long serialVersionUID = 0L;
       }
     }
 
-    private void buildPartial0(via.pro3.grpc.generated.AnimalListResponse result) {
+    private void buildPartial0(generated.AnimalListResponse result) {
       int from_bitField0_ = bitField0_;
     }
 
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof via.pro3.grpc.generated.AnimalListResponse) {
-        return mergeFrom((via.pro3.grpc.generated.AnimalListResponse)other);
+      if (other instanceof generated.AnimalListResponse) {
+        return mergeFrom((generated.AnimalListResponse)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(via.pro3.grpc.generated.AnimalListResponse other) {
-      if (other == via.pro3.grpc.generated.AnimalListResponse.getDefaultInstance()) return this;
+    public Builder mergeFrom(generated.AnimalListResponse other) {
+      if (other == generated.AnimalListResponse.getDefaultInstance()) return this;
       if (animalsBuilder_ == null) {
         if (!other.animals_.isEmpty()) {
           if (animals_.isEmpty()) {
@@ -398,9 +398,9 @@ private static final long serialVersionUID = 0L;
               done = true;
               break;
             case 10: {
-              via.pro3.grpc.generated.Animal m =
+              generated.Animal m =
                   input.readMessage(
-                      via.pro3.grpc.generated.Animal.parser(),
+                      generated.Animal.parser(),
                       extensionRegistry);
               if (animalsBuilder_ == null) {
                 ensureAnimalsIsMutable();
@@ -427,22 +427,22 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private java.util.List<via.pro3.grpc.generated.Animal> animals_ =
+    private java.util.List<generated.Animal> animals_ =
       java.util.Collections.emptyList();
     private void ensureAnimalsIsMutable() {
       if (!((bitField0_ & 0x00000001) != 0)) {
-        animals_ = new java.util.ArrayList<via.pro3.grpc.generated.Animal>(animals_);
+        animals_ = new java.util.ArrayList<generated.Animal>(animals_);
         bitField0_ |= 0x00000001;
        }
     }
 
     private com.google.protobuf.RepeatedFieldBuilder<
-        via.pro3.grpc.generated.Animal, via.pro3.grpc.generated.Animal.Builder, via.pro3.grpc.generated.AnimalOrBuilder> animalsBuilder_;
+        generated.Animal, generated.Animal.Builder, generated.AnimalOrBuilder> animalsBuilder_;
 
     /**
      * <code>repeated .slaughterhouse.Animal animals = 1;</code>
      */
-    public java.util.List<via.pro3.grpc.generated.Animal> getAnimalsList() {
+    public java.util.List<generated.Animal> getAnimalsList() {
       if (animalsBuilder_ == null) {
         return java.util.Collections.unmodifiableList(animals_);
       } else {
@@ -462,7 +462,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>repeated .slaughterhouse.Animal animals = 1;</code>
      */
-    public via.pro3.grpc.generated.Animal getAnimals(int index) {
+    public generated.Animal getAnimals(int index) {
       if (animalsBuilder_ == null) {
         return animals_.get(index);
       } else {
@@ -473,7 +473,7 @@ private static final long serialVersionUID = 0L;
      * <code>repeated .slaughterhouse.Animal animals = 1;</code>
      */
     public Builder setAnimals(
-        int index, via.pro3.grpc.generated.Animal value) {
+        int index, generated.Animal value) {
       if (animalsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -490,7 +490,7 @@ private static final long serialVersionUID = 0L;
      * <code>repeated .slaughterhouse.Animal animals = 1;</code>
      */
     public Builder setAnimals(
-        int index, via.pro3.grpc.generated.Animal.Builder builderForValue) {
+        int index, generated.Animal.Builder builderForValue) {
       if (animalsBuilder_ == null) {
         ensureAnimalsIsMutable();
         animals_.set(index, builderForValue.build());
@@ -503,7 +503,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>repeated .slaughterhouse.Animal animals = 1;</code>
      */
-    public Builder addAnimals(via.pro3.grpc.generated.Animal value) {
+    public Builder addAnimals(generated.Animal value) {
       if (animalsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -520,7 +520,7 @@ private static final long serialVersionUID = 0L;
      * <code>repeated .slaughterhouse.Animal animals = 1;</code>
      */
     public Builder addAnimals(
-        int index, via.pro3.grpc.generated.Animal value) {
+        int index, generated.Animal value) {
       if (animalsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -537,7 +537,7 @@ private static final long serialVersionUID = 0L;
      * <code>repeated .slaughterhouse.Animal animals = 1;</code>
      */
     public Builder addAnimals(
-        via.pro3.grpc.generated.Animal.Builder builderForValue) {
+        generated.Animal.Builder builderForValue) {
       if (animalsBuilder_ == null) {
         ensureAnimalsIsMutable();
         animals_.add(builderForValue.build());
@@ -551,7 +551,7 @@ private static final long serialVersionUID = 0L;
      * <code>repeated .slaughterhouse.Animal animals = 1;</code>
      */
     public Builder addAnimals(
-        int index, via.pro3.grpc.generated.Animal.Builder builderForValue) {
+        int index, generated.Animal.Builder builderForValue) {
       if (animalsBuilder_ == null) {
         ensureAnimalsIsMutable();
         animals_.add(index, builderForValue.build());
@@ -565,7 +565,7 @@ private static final long serialVersionUID = 0L;
      * <code>repeated .slaughterhouse.Animal animals = 1;</code>
      */
     public Builder addAllAnimals(
-        java.lang.Iterable<? extends via.pro3.grpc.generated.Animal> values) {
+        java.lang.Iterable<? extends generated.Animal> values) {
       if (animalsBuilder_ == null) {
         ensureAnimalsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -605,14 +605,14 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>repeated .slaughterhouse.Animal animals = 1;</code>
      */
-    public via.pro3.grpc.generated.Animal.Builder getAnimalsBuilder(
+    public generated.Animal.Builder getAnimalsBuilder(
         int index) {
       return internalGetAnimalsFieldBuilder().getBuilder(index);
     }
     /**
      * <code>repeated .slaughterhouse.Animal animals = 1;</code>
      */
-    public via.pro3.grpc.generated.AnimalOrBuilder getAnimalsOrBuilder(
+    public generated.AnimalOrBuilder getAnimalsOrBuilder(
         int index) {
       if (animalsBuilder_ == null) {
         return animals_.get(index);  } else {
@@ -622,7 +622,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>repeated .slaughterhouse.Animal animals = 1;</code>
      */
-    public java.util.List<? extends via.pro3.grpc.generated.AnimalOrBuilder> 
+    public java.util.List<? extends generated.AnimalOrBuilder> 
          getAnimalsOrBuilderList() {
       if (animalsBuilder_ != null) {
         return animalsBuilder_.getMessageOrBuilderList();
@@ -633,31 +633,31 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>repeated .slaughterhouse.Animal animals = 1;</code>
      */
-    public via.pro3.grpc.generated.Animal.Builder addAnimalsBuilder() {
+    public generated.Animal.Builder addAnimalsBuilder() {
       return internalGetAnimalsFieldBuilder().addBuilder(
-          via.pro3.grpc.generated.Animal.getDefaultInstance());
+          generated.Animal.getDefaultInstance());
     }
     /**
      * <code>repeated .slaughterhouse.Animal animals = 1;</code>
      */
-    public via.pro3.grpc.generated.Animal.Builder addAnimalsBuilder(
+    public generated.Animal.Builder addAnimalsBuilder(
         int index) {
       return internalGetAnimalsFieldBuilder().addBuilder(
-          index, via.pro3.grpc.generated.Animal.getDefaultInstance());
+          index, generated.Animal.getDefaultInstance());
     }
     /**
      * <code>repeated .slaughterhouse.Animal animals = 1;</code>
      */
-    public java.util.List<via.pro3.grpc.generated.Animal.Builder> 
+    public java.util.List<generated.Animal.Builder> 
          getAnimalsBuilderList() {
       return internalGetAnimalsFieldBuilder().getBuilderList();
     }
     private com.google.protobuf.RepeatedFieldBuilder<
-        via.pro3.grpc.generated.Animal, via.pro3.grpc.generated.Animal.Builder, via.pro3.grpc.generated.AnimalOrBuilder> 
+        generated.Animal, generated.Animal.Builder, generated.AnimalOrBuilder> 
         internalGetAnimalsFieldBuilder() {
       if (animalsBuilder_ == null) {
         animalsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
-            via.pro3.grpc.generated.Animal, via.pro3.grpc.generated.Animal.Builder, via.pro3.grpc.generated.AnimalOrBuilder>(
+            generated.Animal, generated.Animal.Builder, generated.AnimalOrBuilder>(
                 animals_,
                 ((bitField0_ & 0x00000001) != 0),
                 getParentForChildren(),
@@ -671,12 +671,12 @@ private static final long serialVersionUID = 0L;
   }
 
   // @@protoc_insertion_point(class_scope:slaughterhouse.AnimalListResponse)
-  private static final via.pro3.grpc.generated.AnimalListResponse DEFAULT_INSTANCE;
+  private static final generated.AnimalListResponse DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new via.pro3.grpc.generated.AnimalListResponse();
+    DEFAULT_INSTANCE = new generated.AnimalListResponse();
   }
 
-  public static via.pro3.grpc.generated.AnimalListResponse getDefaultInstance() {
+  public static generated.AnimalListResponse getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
@@ -712,7 +712,7 @@ private static final long serialVersionUID = 0L;
   }
 
   @java.lang.Override
-  public via.pro3.grpc.generated.AnimalListResponse getDefaultInstanceForType() {
+  public generated.AnimalListResponse getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

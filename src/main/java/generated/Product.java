@@ -3,7 +3,7 @@
 // source: SlaughterHouse.proto
 // Protobuf Java Version: 4.32.0
 
-package via.pro3.grpc.generated;
+package generated;
 
 /**
  * Protobuf type {@code slaughterhouse.Product}
@@ -34,15 +34,15 @@ private static final long serialVersionUID = 0L;
 
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return via.pro3.grpc.generated.SlaughterHouseOuterClass.internal_static_slaughterhouse_Product_descriptor;
+    return generated.SlaughterHouseOuterClass.internal_static_slaughterhouse_Product_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return via.pro3.grpc.generated.SlaughterHouseOuterClass.internal_static_slaughterhouse_Product_fieldAccessorTable
+    return generated.SlaughterHouseOuterClass.internal_static_slaughterhouse_Product_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            via.pro3.grpc.generated.Product.class, via.pro3.grpc.generated.Product.Builder.class);
+            generated.Product.class, generated.Product.Builder.class);
   }
 
   public static final int PRODUCT_ID_FIELD_NUMBER = 1;
@@ -193,10 +193,10 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof via.pro3.grpc.generated.Product)) {
+    if (!(obj instanceof generated.Product)) {
       return super.equals(obj);
     }
-    via.pro3.grpc.generated.Product other = (via.pro3.grpc.generated.Product) obj;
+    generated.Product other = (generated.Product) obj;
 
     if (getProductId()
         != other.getProductId()) return false;
@@ -228,44 +228,44 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static via.pro3.grpc.generated.Product parseFrom(
+  public static generated.Product parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static via.pro3.grpc.generated.Product parseFrom(
+  public static generated.Product parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static via.pro3.grpc.generated.Product parseFrom(
+  public static generated.Product parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static via.pro3.grpc.generated.Product parseFrom(
+  public static generated.Product parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static via.pro3.grpc.generated.Product parseFrom(byte[] data)
+  public static generated.Product parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static via.pro3.grpc.generated.Product parseFrom(
+  public static generated.Product parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static via.pro3.grpc.generated.Product parseFrom(java.io.InputStream input)
+  public static generated.Product parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessage
         .parseWithIOException(PARSER, input);
   }
-  public static via.pro3.grpc.generated.Product parseFrom(
+  public static generated.Product parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -273,26 +273,26 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static via.pro3.grpc.generated.Product parseDelimitedFrom(java.io.InputStream input)
+  public static generated.Product parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessage
         .parseDelimitedWithIOException(PARSER, input);
   }
 
-  public static via.pro3.grpc.generated.Product parseDelimitedFrom(
+  public static generated.Product parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessage
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static via.pro3.grpc.generated.Product parseFrom(
+  public static generated.Product parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessage
         .parseWithIOException(PARSER, input);
   }
-  public static via.pro3.grpc.generated.Product parseFrom(
+  public static generated.Product parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -305,7 +305,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(via.pro3.grpc.generated.Product prototype) {
+  public static Builder newBuilder(generated.Product prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -326,21 +326,21 @@ private static final long serialVersionUID = 0L;
   public static final class Builder extends
       com.google.protobuf.GeneratedMessage.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:slaughterhouse.Product)
-      via.pro3.grpc.generated.ProductOrBuilder {
+      generated.ProductOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return via.pro3.grpc.generated.SlaughterHouseOuterClass.internal_static_slaughterhouse_Product_descriptor;
+      return generated.SlaughterHouseOuterClass.internal_static_slaughterhouse_Product_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return via.pro3.grpc.generated.SlaughterHouseOuterClass.internal_static_slaughterhouse_Product_fieldAccessorTable
+      return generated.SlaughterHouseOuterClass.internal_static_slaughterhouse_Product_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              via.pro3.grpc.generated.Product.class, via.pro3.grpc.generated.Product.Builder.class);
+              generated.Product.class, generated.Product.Builder.class);
     }
 
-    // Construct using via.pro3.grpc.generated.Product.newBuilder()
+    // Construct using generated.Product.newBuilder()
     private Builder() {
 
     }
@@ -363,17 +363,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return via.pro3.grpc.generated.SlaughterHouseOuterClass.internal_static_slaughterhouse_Product_descriptor;
+      return generated.SlaughterHouseOuterClass.internal_static_slaughterhouse_Product_descriptor;
     }
 
     @java.lang.Override
-    public via.pro3.grpc.generated.Product getDefaultInstanceForType() {
-      return via.pro3.grpc.generated.Product.getDefaultInstance();
+    public generated.Product getDefaultInstanceForType() {
+      return generated.Product.getDefaultInstance();
     }
 
     @java.lang.Override
-    public via.pro3.grpc.generated.Product build() {
-      via.pro3.grpc.generated.Product result = buildPartial();
+    public generated.Product build() {
+      generated.Product result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -381,14 +381,14 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public via.pro3.grpc.generated.Product buildPartial() {
-      via.pro3.grpc.generated.Product result = new via.pro3.grpc.generated.Product(this);
+    public generated.Product buildPartial() {
+      generated.Product result = new generated.Product(this);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
-    private void buildPartial0(via.pro3.grpc.generated.Product result) {
+    private void buildPartial0(generated.Product result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.productId_ = productId_;
@@ -404,16 +404,16 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof via.pro3.grpc.generated.Product) {
-        return mergeFrom((via.pro3.grpc.generated.Product)other);
+      if (other instanceof generated.Product) {
+        return mergeFrom((generated.Product)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(via.pro3.grpc.generated.Product other) {
-      if (other == via.pro3.grpc.generated.Product.getDefaultInstance()) return this;
+    public Builder mergeFrom(generated.Product other) {
+      if (other == generated.Product.getDefaultInstance()) return this;
       if (other.getProductId() != 0) {
         setProductId(other.getProductId());
       }
@@ -694,12 +694,12 @@ private static final long serialVersionUID = 0L;
   }
 
   // @@protoc_insertion_point(class_scope:slaughterhouse.Product)
-  private static final via.pro3.grpc.generated.Product DEFAULT_INSTANCE;
+  private static final generated.Product DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new via.pro3.grpc.generated.Product();
+    DEFAULT_INSTANCE = new generated.Product();
   }
 
-  public static via.pro3.grpc.generated.Product getDefaultInstance() {
+  public static generated.Product getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
@@ -735,7 +735,7 @@ private static final long serialVersionUID = 0L;
   }
 
   @java.lang.Override
-  public via.pro3.grpc.generated.Product getDefaultInstanceForType() {
+  public generated.Product getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

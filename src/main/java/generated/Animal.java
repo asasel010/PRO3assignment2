@@ -3,16 +3,16 @@
 // source: SlaughterHouse.proto
 // Protobuf Java Version: 4.32.0
 
-package via.pro3.grpc.generated;
+package generated;
 
 /**
- * Protobuf type {@code slaughterhouse.AnimalPart}
+ * Protobuf type {@code slaughterhouse.Animal}
  */
 @com.google.protobuf.Generated
-public final class AnimalPart extends
+public final class Animal extends
     com.google.protobuf.GeneratedMessage implements
-    // @@protoc_insertion_point(message_implements:slaughterhouse.AnimalPart)
-    AnimalPartOrBuilder {
+    // @@protoc_insertion_point(message_implements:slaughterhouse.Animal)
+    AnimalOrBuilder {
 private static final long serialVersionUID = 0L;
   static {
     com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
@@ -21,44 +21,84 @@ private static final long serialVersionUID = 0L;
       /* minor= */ 32,
       /* patch= */ 0,
       /* suffix= */ "",
-      AnimalPart.class.getName());
+      Animal.class.getName());
   }
-  // Use AnimalPart.newBuilder() to construct.
-  private AnimalPart(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+  // Use Animal.newBuilder() to construct.
+  private Animal(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
     super(builder);
   }
-  private AnimalPart() {
-    typePart_ = "";
+  private Animal() {
+    registrationNumber_ = "";
+    type_ = "";
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return via.pro3.grpc.generated.SlaughterHouseOuterClass.internal_static_slaughterhouse_AnimalPart_descriptor;
+    return generated.SlaughterHouseOuterClass.internal_static_slaughterhouse_Animal_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return via.pro3.grpc.generated.SlaughterHouseOuterClass.internal_static_slaughterhouse_AnimalPart_fieldAccessorTable
+    return generated.SlaughterHouseOuterClass.internal_static_slaughterhouse_Animal_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            via.pro3.grpc.generated.AnimalPart.class, via.pro3.grpc.generated.AnimalPart.Builder.class);
+            generated.Animal.class, generated.Animal.Builder.class);
   }
 
-  public static final int PART_ID_FIELD_NUMBER = 1;
-  private int partId_ = 0;
+  public static final int ANIMAL_ID_FIELD_NUMBER = 1;
+  private int animalId_ = 0;
   /**
-   * <code>int32 part_id = 1;</code>
-   * @return The partId.
+   * <code>int32 animal_id = 1;</code>
+   * @return The animalId.
    */
   @java.lang.Override
-  public int getPartId() {
-    return partId_;
+  public int getAnimalId() {
+    return animalId_;
   }
 
-  public static final int WEIGHT_FIELD_NUMBER = 2;
+  public static final int REGISTRATION_NUMBER_FIELD_NUMBER = 2;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object registrationNumber_ = "";
+  /**
+   * <code>string registration_number = 2;</code>
+   * @return The registrationNumber.
+   */
+  @java.lang.Override
+  public java.lang.String getRegistrationNumber() {
+    java.lang.Object ref = registrationNumber_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      registrationNumber_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>string registration_number = 2;</code>
+   * @return The bytes for registrationNumber.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getRegistrationNumberBytes() {
+    java.lang.Object ref = registrationNumber_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      registrationNumber_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int WEIGHT_FIELD_NUMBER = 3;
   private double weight_ = 0D;
   /**
-   * <code>double weight = 2;</code>
+   * <code>double weight = 3;</code>
    * @return The weight.
    */
   @java.lang.Override
@@ -66,54 +106,43 @@ private static final long serialVersionUID = 0L;
     return weight_;
   }
 
-  public static final int TYPE_PART_FIELD_NUMBER = 3;
+  public static final int TYPE_FIELD_NUMBER = 4;
   @SuppressWarnings("serial")
-  private volatile java.lang.Object typePart_ = "";
+  private volatile java.lang.Object type_ = "";
   /**
-   * <code>string type_part = 3;</code>
-   * @return The typePart.
+   * <code>string type = 4;</code>
+   * @return The type.
    */
   @java.lang.Override
-  public java.lang.String getTypePart() {
-    java.lang.Object ref = typePart_;
+  public java.lang.String getType() {
+    java.lang.Object ref = type_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
       com.google.protobuf.ByteString bs = 
           (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
-      typePart_ = s;
+      type_ = s;
       return s;
     }
   }
   /**
-   * <code>string type_part = 3;</code>
-   * @return The bytes for typePart.
+   * <code>string type = 4;</code>
+   * @return The bytes for type.
    */
   @java.lang.Override
   public com.google.protobuf.ByteString
-      getTypePartBytes() {
-    java.lang.Object ref = typePart_;
+      getTypeBytes() {
+    java.lang.Object ref = type_;
     if (ref instanceof java.lang.String) {
       com.google.protobuf.ByteString b = 
           com.google.protobuf.ByteString.copyFromUtf8(
               (java.lang.String) ref);
-      typePart_ = b;
+      type_ = b;
       return b;
     } else {
       return (com.google.protobuf.ByteString) ref;
     }
-  }
-
-  public static final int ANIMAL_ID_FIELD_NUMBER = 4;
-  private int animalId_ = 0;
-  /**
-   * <code>int32 animal_id = 4;</code>
-   * @return The animalId.
-   */
-  @java.lang.Override
-  public int getAnimalId() {
-    return animalId_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -130,17 +159,17 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (partId_ != 0) {
-      output.writeInt32(1, partId_);
+    if (animalId_ != 0) {
+      output.writeInt32(1, animalId_);
+    }
+    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(registrationNumber_)) {
+      com.google.protobuf.GeneratedMessage.writeString(output, 2, registrationNumber_);
     }
     if (java.lang.Double.doubleToRawLongBits(weight_) != 0) {
-      output.writeDouble(2, weight_);
+      output.writeDouble(3, weight_);
     }
-    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(typePart_)) {
-      com.google.protobuf.GeneratedMessage.writeString(output, 3, typePart_);
-    }
-    if (animalId_ != 0) {
-      output.writeInt32(4, animalId_);
+    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(type_)) {
+      com.google.protobuf.GeneratedMessage.writeString(output, 4, type_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -151,20 +180,19 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (partId_ != 0) {
+    if (animalId_ != 0) {
       size += com.google.protobuf.CodedOutputStream
-        .computeInt32Size(1, partId_);
+        .computeInt32Size(1, animalId_);
+    }
+    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(registrationNumber_)) {
+      size += com.google.protobuf.GeneratedMessage.computeStringSize(2, registrationNumber_);
     }
     if (java.lang.Double.doubleToRawLongBits(weight_) != 0) {
       size += com.google.protobuf.CodedOutputStream
-        .computeDoubleSize(2, weight_);
+        .computeDoubleSize(3, weight_);
     }
-    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(typePart_)) {
-      size += com.google.protobuf.GeneratedMessage.computeStringSize(3, typePart_);
-    }
-    if (animalId_ != 0) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeInt32Size(4, animalId_);
+    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(type_)) {
+      size += com.google.protobuf.GeneratedMessage.computeStringSize(4, type_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -176,20 +204,20 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof via.pro3.grpc.generated.AnimalPart)) {
+    if (!(obj instanceof generated.Animal)) {
       return super.equals(obj);
     }
-    via.pro3.grpc.generated.AnimalPart other = (via.pro3.grpc.generated.AnimalPart) obj;
+    generated.Animal other = (generated.Animal) obj;
 
-    if (getPartId()
-        != other.getPartId()) return false;
+    if (getAnimalId()
+        != other.getAnimalId()) return false;
+    if (!getRegistrationNumber()
+        .equals(other.getRegistrationNumber())) return false;
     if (java.lang.Double.doubleToLongBits(getWeight())
         != java.lang.Double.doubleToLongBits(
             other.getWeight())) return false;
-    if (!getTypePart()
-        .equals(other.getTypePart())) return false;
-    if (getAnimalId()
-        != other.getAnimalId()) return false;
+    if (!getType()
+        .equals(other.getType())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -201,58 +229,58 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (37 * hash) + PART_ID_FIELD_NUMBER;
-    hash = (53 * hash) + getPartId();
+    hash = (37 * hash) + ANIMAL_ID_FIELD_NUMBER;
+    hash = (53 * hash) + getAnimalId();
+    hash = (37 * hash) + REGISTRATION_NUMBER_FIELD_NUMBER;
+    hash = (53 * hash) + getRegistrationNumber().hashCode();
     hash = (37 * hash) + WEIGHT_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
         java.lang.Double.doubleToLongBits(getWeight()));
-    hash = (37 * hash) + TYPE_PART_FIELD_NUMBER;
-    hash = (53 * hash) + getTypePart().hashCode();
-    hash = (37 * hash) + ANIMAL_ID_FIELD_NUMBER;
-    hash = (53 * hash) + getAnimalId();
+    hash = (37 * hash) + TYPE_FIELD_NUMBER;
+    hash = (53 * hash) + getType().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
 
-  public static via.pro3.grpc.generated.AnimalPart parseFrom(
+  public static generated.Animal parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static via.pro3.grpc.generated.AnimalPart parseFrom(
+  public static generated.Animal parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static via.pro3.grpc.generated.AnimalPart parseFrom(
+  public static generated.Animal parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static via.pro3.grpc.generated.AnimalPart parseFrom(
+  public static generated.Animal parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static via.pro3.grpc.generated.AnimalPart parseFrom(byte[] data)
+  public static generated.Animal parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static via.pro3.grpc.generated.AnimalPart parseFrom(
+  public static generated.Animal parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static via.pro3.grpc.generated.AnimalPart parseFrom(java.io.InputStream input)
+  public static generated.Animal parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessage
         .parseWithIOException(PARSER, input);
   }
-  public static via.pro3.grpc.generated.AnimalPart parseFrom(
+  public static generated.Animal parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -260,26 +288,26 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static via.pro3.grpc.generated.AnimalPart parseDelimitedFrom(java.io.InputStream input)
+  public static generated.Animal parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessage
         .parseDelimitedWithIOException(PARSER, input);
   }
 
-  public static via.pro3.grpc.generated.AnimalPart parseDelimitedFrom(
+  public static generated.Animal parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessage
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static via.pro3.grpc.generated.AnimalPart parseFrom(
+  public static generated.Animal parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessage
         .parseWithIOException(PARSER, input);
   }
-  public static via.pro3.grpc.generated.AnimalPart parseFrom(
+  public static generated.Animal parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -292,7 +320,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(via.pro3.grpc.generated.AnimalPart prototype) {
+  public static Builder newBuilder(generated.Animal prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -308,26 +336,26 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * Protobuf type {@code slaughterhouse.AnimalPart}
+   * Protobuf type {@code slaughterhouse.Animal}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:slaughterhouse.AnimalPart)
-      via.pro3.grpc.generated.AnimalPartOrBuilder {
+      // @@protoc_insertion_point(builder_implements:slaughterhouse.Animal)
+      generated.AnimalOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return via.pro3.grpc.generated.SlaughterHouseOuterClass.internal_static_slaughterhouse_AnimalPart_descriptor;
+      return generated.SlaughterHouseOuterClass.internal_static_slaughterhouse_Animal_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return via.pro3.grpc.generated.SlaughterHouseOuterClass.internal_static_slaughterhouse_AnimalPart_fieldAccessorTable
+      return generated.SlaughterHouseOuterClass.internal_static_slaughterhouse_Animal_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              via.pro3.grpc.generated.AnimalPart.class, via.pro3.grpc.generated.AnimalPart.Builder.class);
+              generated.Animal.class, generated.Animal.Builder.class);
     }
 
-    // Construct using via.pro3.grpc.generated.AnimalPart.newBuilder()
+    // Construct using generated.Animal.newBuilder()
     private Builder() {
 
     }
@@ -341,27 +369,27 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
-      partId_ = 0;
-      weight_ = 0D;
-      typePart_ = "";
       animalId_ = 0;
+      registrationNumber_ = "";
+      weight_ = 0D;
+      type_ = "";
       return this;
     }
 
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return via.pro3.grpc.generated.SlaughterHouseOuterClass.internal_static_slaughterhouse_AnimalPart_descriptor;
+      return generated.SlaughterHouseOuterClass.internal_static_slaughterhouse_Animal_descriptor;
     }
 
     @java.lang.Override
-    public via.pro3.grpc.generated.AnimalPart getDefaultInstanceForType() {
-      return via.pro3.grpc.generated.AnimalPart.getDefaultInstance();
+    public generated.Animal getDefaultInstanceForType() {
+      return generated.Animal.getDefaultInstance();
     }
 
     @java.lang.Override
-    public via.pro3.grpc.generated.AnimalPart build() {
-      via.pro3.grpc.generated.AnimalPart result = buildPartial();
+    public generated.Animal build() {
+      generated.Animal result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -369,54 +397,56 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public via.pro3.grpc.generated.AnimalPart buildPartial() {
-      via.pro3.grpc.generated.AnimalPart result = new via.pro3.grpc.generated.AnimalPart(this);
+    public generated.Animal buildPartial() {
+      generated.Animal result = new generated.Animal(this);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
-    private void buildPartial0(via.pro3.grpc.generated.AnimalPart result) {
+    private void buildPartial0(generated.Animal result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.partId_ = partId_;
+        result.animalId_ = animalId_;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.weight_ = weight_;
+        result.registrationNumber_ = registrationNumber_;
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.typePart_ = typePart_;
+        result.weight_ = weight_;
       }
       if (((from_bitField0_ & 0x00000008) != 0)) {
-        result.animalId_ = animalId_;
+        result.type_ = type_;
       }
     }
 
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof via.pro3.grpc.generated.AnimalPart) {
-        return mergeFrom((via.pro3.grpc.generated.AnimalPart)other);
+      if (other instanceof generated.Animal) {
+        return mergeFrom((generated.Animal)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(via.pro3.grpc.generated.AnimalPart other) {
-      if (other == via.pro3.grpc.generated.AnimalPart.getDefaultInstance()) return this;
-      if (other.getPartId() != 0) {
-        setPartId(other.getPartId());
+    public Builder mergeFrom(generated.Animal other) {
+      if (other == generated.Animal.getDefaultInstance()) return this;
+      if (other.getAnimalId() != 0) {
+        setAnimalId(other.getAnimalId());
+      }
+      if (!other.getRegistrationNumber().isEmpty()) {
+        registrationNumber_ = other.registrationNumber_;
+        bitField0_ |= 0x00000002;
+        onChanged();
       }
       if (java.lang.Double.doubleToRawLongBits(other.getWeight()) != 0) {
         setWeight(other.getWeight());
       }
-      if (!other.getTypePart().isEmpty()) {
-        typePart_ = other.typePart_;
-        bitField0_ |= 0x00000004;
+      if (!other.getType().isEmpty()) {
+        type_ = other.type_;
+        bitField0_ |= 0x00000008;
         onChanged();
-      }
-      if (other.getAnimalId() != 0) {
-        setAnimalId(other.getAnimalId());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -445,25 +475,25 @@ private static final long serialVersionUID = 0L;
               done = true;
               break;
             case 8: {
-              partId_ = input.readInt32();
+              animalId_ = input.readInt32();
               bitField0_ |= 0x00000001;
               break;
             } // case 8
-            case 17: {
-              weight_ = input.readDouble();
+            case 18: {
+              registrationNumber_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000002;
               break;
-            } // case 17
-            case 26: {
-              typePart_ = input.readStringRequireUtf8();
+            } // case 18
+            case 25: {
+              weight_ = input.readDouble();
               bitField0_ |= 0x00000004;
               break;
-            } // case 26
-            case 32: {
-              animalId_ = input.readInt32();
+            } // case 25
+            case 34: {
+              type_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000008;
               break;
-            } // case 32
+            } // case 34
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -481,145 +511,9 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private int partId_ ;
-    /**
-     * <code>int32 part_id = 1;</code>
-     * @return The partId.
-     */
-    @java.lang.Override
-    public int getPartId() {
-      return partId_;
-    }
-    /**
-     * <code>int32 part_id = 1;</code>
-     * @param value The partId to set.
-     * @return This builder for chaining.
-     */
-    public Builder setPartId(int value) {
-
-      partId_ = value;
-      bitField0_ |= 0x00000001;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>int32 part_id = 1;</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearPartId() {
-      bitField0_ = (bitField0_ & ~0x00000001);
-      partId_ = 0;
-      onChanged();
-      return this;
-    }
-
-    private double weight_ ;
-    /**
-     * <code>double weight = 2;</code>
-     * @return The weight.
-     */
-    @java.lang.Override
-    public double getWeight() {
-      return weight_;
-    }
-    /**
-     * <code>double weight = 2;</code>
-     * @param value The weight to set.
-     * @return This builder for chaining.
-     */
-    public Builder setWeight(double value) {
-
-      weight_ = value;
-      bitField0_ |= 0x00000002;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>double weight = 2;</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearWeight() {
-      bitField0_ = (bitField0_ & ~0x00000002);
-      weight_ = 0D;
-      onChanged();
-      return this;
-    }
-
-    private java.lang.Object typePart_ = "";
-    /**
-     * <code>string type_part = 3;</code>
-     * @return The typePart.
-     */
-    public java.lang.String getTypePart() {
-      java.lang.Object ref = typePart_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        typePart_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
-      }
-    }
-    /**
-     * <code>string type_part = 3;</code>
-     * @return The bytes for typePart.
-     */
-    public com.google.protobuf.ByteString
-        getTypePartBytes() {
-      java.lang.Object ref = typePart_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        typePart_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    /**
-     * <code>string type_part = 3;</code>
-     * @param value The typePart to set.
-     * @return This builder for chaining.
-     */
-    public Builder setTypePart(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      typePart_ = value;
-      bitField0_ |= 0x00000004;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>string type_part = 3;</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearTypePart() {
-      typePart_ = getDefaultInstance().getTypePart();
-      bitField0_ = (bitField0_ & ~0x00000004);
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>string type_part = 3;</code>
-     * @param value The bytes for typePart to set.
-     * @return This builder for chaining.
-     */
-    public Builder setTypePartBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      typePart_ = value;
-      bitField0_ |= 0x00000004;
-      onChanged();
-      return this;
-    }
-
     private int animalId_ ;
     /**
-     * <code>int32 animal_id = 4;</code>
+     * <code>int32 animal_id = 1;</code>
      * @return The animalId.
      */
     @java.lang.Override
@@ -627,45 +521,221 @@ private static final long serialVersionUID = 0L;
       return animalId_;
     }
     /**
-     * <code>int32 animal_id = 4;</code>
+     * <code>int32 animal_id = 1;</code>
      * @param value The animalId to set.
      * @return This builder for chaining.
      */
     public Builder setAnimalId(int value) {
 
       animalId_ = value;
-      bitField0_ |= 0x00000008;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
     /**
-     * <code>int32 animal_id = 4;</code>
+     * <code>int32 animal_id = 1;</code>
      * @return This builder for chaining.
      */
     public Builder clearAnimalId() {
-      bitField0_ = (bitField0_ & ~0x00000008);
+      bitField0_ = (bitField0_ & ~0x00000001);
       animalId_ = 0;
       onChanged();
       return this;
     }
 
-    // @@protoc_insertion_point(builder_scope:slaughterhouse.AnimalPart)
+    private java.lang.Object registrationNumber_ = "";
+    /**
+     * <code>string registration_number = 2;</code>
+     * @return The registrationNumber.
+     */
+    public java.lang.String getRegistrationNumber() {
+      java.lang.Object ref = registrationNumber_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        registrationNumber_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>string registration_number = 2;</code>
+     * @return The bytes for registrationNumber.
+     */
+    public com.google.protobuf.ByteString
+        getRegistrationNumberBytes() {
+      java.lang.Object ref = registrationNumber_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        registrationNumber_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>string registration_number = 2;</code>
+     * @param value The registrationNumber to set.
+     * @return This builder for chaining.
+     */
+    public Builder setRegistrationNumber(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      registrationNumber_ = value;
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string registration_number = 2;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearRegistrationNumber() {
+      registrationNumber_ = getDefaultInstance().getRegistrationNumber();
+      bitField0_ = (bitField0_ & ~0x00000002);
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string registration_number = 2;</code>
+     * @param value The bytes for registrationNumber to set.
+     * @return This builder for chaining.
+     */
+    public Builder setRegistrationNumberBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      registrationNumber_ = value;
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+
+    private double weight_ ;
+    /**
+     * <code>double weight = 3;</code>
+     * @return The weight.
+     */
+    @java.lang.Override
+    public double getWeight() {
+      return weight_;
+    }
+    /**
+     * <code>double weight = 3;</code>
+     * @param value The weight to set.
+     * @return This builder for chaining.
+     */
+    public Builder setWeight(double value) {
+
+      weight_ = value;
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>double weight = 3;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearWeight() {
+      bitField0_ = (bitField0_ & ~0x00000004);
+      weight_ = 0D;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object type_ = "";
+    /**
+     * <code>string type = 4;</code>
+     * @return The type.
+     */
+    public java.lang.String getType() {
+      java.lang.Object ref = type_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        type_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>string type = 4;</code>
+     * @return The bytes for type.
+     */
+    public com.google.protobuf.ByteString
+        getTypeBytes() {
+      java.lang.Object ref = type_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        type_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>string type = 4;</code>
+     * @param value The type to set.
+     * @return This builder for chaining.
+     */
+    public Builder setType(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      type_ = value;
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string type = 4;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearType() {
+      type_ = getDefaultInstance().getType();
+      bitField0_ = (bitField0_ & ~0x00000008);
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string type = 4;</code>
+     * @param value The bytes for type to set.
+     * @return This builder for chaining.
+     */
+    public Builder setTypeBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      type_ = value;
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+
+    // @@protoc_insertion_point(builder_scope:slaughterhouse.Animal)
   }
 
-  // @@protoc_insertion_point(class_scope:slaughterhouse.AnimalPart)
-  private static final via.pro3.grpc.generated.AnimalPart DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:slaughterhouse.Animal)
+  private static final generated.Animal DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new via.pro3.grpc.generated.AnimalPart();
+    DEFAULT_INSTANCE = new generated.Animal();
   }
 
-  public static via.pro3.grpc.generated.AnimalPart getDefaultInstance() {
+  public static generated.Animal getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<AnimalPart>
-      PARSER = new com.google.protobuf.AbstractParser<AnimalPart>() {
+  private static final com.google.protobuf.Parser<Animal>
+      PARSER = new com.google.protobuf.AbstractParser<Animal>() {
     @java.lang.Override
-    public AnimalPart parsePartialFrom(
+    public Animal parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -684,17 +754,17 @@ private static final long serialVersionUID = 0L;
     }
   };
 
-  public static com.google.protobuf.Parser<AnimalPart> parser() {
+  public static com.google.protobuf.Parser<Animal> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<AnimalPart> getParserForType() {
+  public com.google.protobuf.Parser<Animal> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public via.pro3.grpc.generated.AnimalPart getDefaultInstanceForType() {
+  public generated.Animal getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

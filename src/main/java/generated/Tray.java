@@ -3,7 +3,7 @@
 // source: SlaughterHouse.proto
 // Protobuf Java Version: 4.32.0
 
-package via.pro3.grpc.generated;
+package generated;
 
 /**
  * Protobuf type {@code slaughterhouse.Tray}
@@ -33,15 +33,15 @@ private static final long serialVersionUID = 0L;
 
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return via.pro3.grpc.generated.SlaughterHouseOuterClass.internal_static_slaughterhouse_Tray_descriptor;
+    return generated.SlaughterHouseOuterClass.internal_static_slaughterhouse_Tray_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return via.pro3.grpc.generated.SlaughterHouseOuterClass.internal_static_slaughterhouse_Tray_fieldAccessorTable
+    return generated.SlaughterHouseOuterClass.internal_static_slaughterhouse_Tray_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            via.pro3.grpc.generated.Tray.class, via.pro3.grpc.generated.Tray.Builder.class);
+            generated.Tray.class, generated.Tray.Builder.class);
   }
 
   public static final int TRAY_ID_FIELD_NUMBER = 1;
@@ -68,19 +68,19 @@ private static final long serialVersionUID = 0L;
 
   public static final int ANIMAL_PARTS_FIELD_NUMBER = 3;
   @SuppressWarnings("serial")
-  private java.util.List<via.pro3.grpc.generated.AnimalPart> animalParts_;
+  private java.util.List<generated.AnimalPart> animalParts_;
   /**
    * <code>repeated .slaughterhouse.AnimalPart animal_parts = 3;</code>
    */
   @java.lang.Override
-  public java.util.List<via.pro3.grpc.generated.AnimalPart> getAnimalPartsList() {
+  public java.util.List<generated.AnimalPart> getAnimalPartsList() {
     return animalParts_;
   }
   /**
    * <code>repeated .slaughterhouse.AnimalPart animal_parts = 3;</code>
    */
   @java.lang.Override
-  public java.util.List<? extends via.pro3.grpc.generated.AnimalPartOrBuilder> 
+  public java.util.List<? extends generated.AnimalPartOrBuilder> 
       getAnimalPartsOrBuilderList() {
     return animalParts_;
   }
@@ -95,14 +95,14 @@ private static final long serialVersionUID = 0L;
    * <code>repeated .slaughterhouse.AnimalPart animal_parts = 3;</code>
    */
   @java.lang.Override
-  public via.pro3.grpc.generated.AnimalPart getAnimalParts(int index) {
+  public generated.AnimalPart getAnimalParts(int index) {
     return animalParts_.get(index);
   }
   /**
    * <code>repeated .slaughterhouse.AnimalPart animal_parts = 3;</code>
    */
   @java.lang.Override
-  public via.pro3.grpc.generated.AnimalPartOrBuilder getAnimalPartsOrBuilder(
+  public generated.AnimalPartOrBuilder getAnimalPartsOrBuilder(
       int index) {
     return animalParts_.get(index);
   }
@@ -161,10 +161,10 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof via.pro3.grpc.generated.Tray)) {
+    if (!(obj instanceof generated.Tray)) {
       return super.equals(obj);
     }
-    via.pro3.grpc.generated.Tray other = (via.pro3.grpc.generated.Tray) obj;
+    generated.Tray other = (generated.Tray) obj;
 
     if (getTrayId()
         != other.getTrayId()) return false;
@@ -198,44 +198,44 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static via.pro3.grpc.generated.Tray parseFrom(
+  public static generated.Tray parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static via.pro3.grpc.generated.Tray parseFrom(
+  public static generated.Tray parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static via.pro3.grpc.generated.Tray parseFrom(
+  public static generated.Tray parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static via.pro3.grpc.generated.Tray parseFrom(
+  public static generated.Tray parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static via.pro3.grpc.generated.Tray parseFrom(byte[] data)
+  public static generated.Tray parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static via.pro3.grpc.generated.Tray parseFrom(
+  public static generated.Tray parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static via.pro3.grpc.generated.Tray parseFrom(java.io.InputStream input)
+  public static generated.Tray parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessage
         .parseWithIOException(PARSER, input);
   }
-  public static via.pro3.grpc.generated.Tray parseFrom(
+  public static generated.Tray parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -243,26 +243,26 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static via.pro3.grpc.generated.Tray parseDelimitedFrom(java.io.InputStream input)
+  public static generated.Tray parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessage
         .parseDelimitedWithIOException(PARSER, input);
   }
 
-  public static via.pro3.grpc.generated.Tray parseDelimitedFrom(
+  public static generated.Tray parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessage
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static via.pro3.grpc.generated.Tray parseFrom(
+  public static generated.Tray parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessage
         .parseWithIOException(PARSER, input);
   }
-  public static via.pro3.grpc.generated.Tray parseFrom(
+  public static generated.Tray parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -275,7 +275,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(via.pro3.grpc.generated.Tray prototype) {
+  public static Builder newBuilder(generated.Tray prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -296,21 +296,21 @@ private static final long serialVersionUID = 0L;
   public static final class Builder extends
       com.google.protobuf.GeneratedMessage.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:slaughterhouse.Tray)
-      via.pro3.grpc.generated.TrayOrBuilder {
+      generated.TrayOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return via.pro3.grpc.generated.SlaughterHouseOuterClass.internal_static_slaughterhouse_Tray_descriptor;
+      return generated.SlaughterHouseOuterClass.internal_static_slaughterhouse_Tray_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return via.pro3.grpc.generated.SlaughterHouseOuterClass.internal_static_slaughterhouse_Tray_fieldAccessorTable
+      return generated.SlaughterHouseOuterClass.internal_static_slaughterhouse_Tray_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              via.pro3.grpc.generated.Tray.class, via.pro3.grpc.generated.Tray.Builder.class);
+              generated.Tray.class, generated.Tray.Builder.class);
     }
 
-    // Construct using via.pro3.grpc.generated.Tray.newBuilder()
+    // Construct using generated.Tray.newBuilder()
     private Builder() {
 
     }
@@ -339,17 +339,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return via.pro3.grpc.generated.SlaughterHouseOuterClass.internal_static_slaughterhouse_Tray_descriptor;
+      return generated.SlaughterHouseOuterClass.internal_static_slaughterhouse_Tray_descriptor;
     }
 
     @java.lang.Override
-    public via.pro3.grpc.generated.Tray getDefaultInstanceForType() {
-      return via.pro3.grpc.generated.Tray.getDefaultInstance();
+    public generated.Tray getDefaultInstanceForType() {
+      return generated.Tray.getDefaultInstance();
     }
 
     @java.lang.Override
-    public via.pro3.grpc.generated.Tray build() {
-      via.pro3.grpc.generated.Tray result = buildPartial();
+    public generated.Tray build() {
+      generated.Tray result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -357,15 +357,15 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public via.pro3.grpc.generated.Tray buildPartial() {
-      via.pro3.grpc.generated.Tray result = new via.pro3.grpc.generated.Tray(this);
+    public generated.Tray buildPartial() {
+      generated.Tray result = new generated.Tray(this);
       buildPartialRepeatedFields(result);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
-    private void buildPartialRepeatedFields(via.pro3.grpc.generated.Tray result) {
+    private void buildPartialRepeatedFields(generated.Tray result) {
       if (animalPartsBuilder_ == null) {
         if (((bitField0_ & 0x00000004) != 0)) {
           animalParts_ = java.util.Collections.unmodifiableList(animalParts_);
@@ -377,7 +377,7 @@ private static final long serialVersionUID = 0L;
       }
     }
 
-    private void buildPartial0(via.pro3.grpc.generated.Tray result) {
+    private void buildPartial0(generated.Tray result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.trayId_ = trayId_;
@@ -389,16 +389,16 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof via.pro3.grpc.generated.Tray) {
-        return mergeFrom((via.pro3.grpc.generated.Tray)other);
+      if (other instanceof generated.Tray) {
+        return mergeFrom((generated.Tray)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(via.pro3.grpc.generated.Tray other) {
-      if (other == via.pro3.grpc.generated.Tray.getDefaultInstance()) return this;
+    public Builder mergeFrom(generated.Tray other) {
+      if (other == generated.Tray.getDefaultInstance()) return this;
       if (other.getTrayId() != 0) {
         setTrayId(other.getTrayId());
       }
@@ -468,9 +468,9 @@ private static final long serialVersionUID = 0L;
               break;
             } // case 17
             case 26: {
-              via.pro3.grpc.generated.AnimalPart m =
+              generated.AnimalPart m =
                   input.readMessage(
-                      via.pro3.grpc.generated.AnimalPart.parser(),
+                      generated.AnimalPart.parser(),
                       extensionRegistry);
               if (animalPartsBuilder_ == null) {
                 ensureAnimalPartsIsMutable();
@@ -561,22 +561,22 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private java.util.List<via.pro3.grpc.generated.AnimalPart> animalParts_ =
+    private java.util.List<generated.AnimalPart> animalParts_ =
       java.util.Collections.emptyList();
     private void ensureAnimalPartsIsMutable() {
       if (!((bitField0_ & 0x00000004) != 0)) {
-        animalParts_ = new java.util.ArrayList<via.pro3.grpc.generated.AnimalPart>(animalParts_);
+        animalParts_ = new java.util.ArrayList<generated.AnimalPart>(animalParts_);
         bitField0_ |= 0x00000004;
        }
     }
 
     private com.google.protobuf.RepeatedFieldBuilder<
-        via.pro3.grpc.generated.AnimalPart, via.pro3.grpc.generated.AnimalPart.Builder, via.pro3.grpc.generated.AnimalPartOrBuilder> animalPartsBuilder_;
+        generated.AnimalPart, generated.AnimalPart.Builder, generated.AnimalPartOrBuilder> animalPartsBuilder_;
 
     /**
      * <code>repeated .slaughterhouse.AnimalPart animal_parts = 3;</code>
      */
-    public java.util.List<via.pro3.grpc.generated.AnimalPart> getAnimalPartsList() {
+    public java.util.List<generated.AnimalPart> getAnimalPartsList() {
       if (animalPartsBuilder_ == null) {
         return java.util.Collections.unmodifiableList(animalParts_);
       } else {
@@ -596,7 +596,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>repeated .slaughterhouse.AnimalPart animal_parts = 3;</code>
      */
-    public via.pro3.grpc.generated.AnimalPart getAnimalParts(int index) {
+    public generated.AnimalPart getAnimalParts(int index) {
       if (animalPartsBuilder_ == null) {
         return animalParts_.get(index);
       } else {
@@ -607,7 +607,7 @@ private static final long serialVersionUID = 0L;
      * <code>repeated .slaughterhouse.AnimalPart animal_parts = 3;</code>
      */
     public Builder setAnimalParts(
-        int index, via.pro3.grpc.generated.AnimalPart value) {
+        int index, generated.AnimalPart value) {
       if (animalPartsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -624,7 +624,7 @@ private static final long serialVersionUID = 0L;
      * <code>repeated .slaughterhouse.AnimalPart animal_parts = 3;</code>
      */
     public Builder setAnimalParts(
-        int index, via.pro3.grpc.generated.AnimalPart.Builder builderForValue) {
+        int index, generated.AnimalPart.Builder builderForValue) {
       if (animalPartsBuilder_ == null) {
         ensureAnimalPartsIsMutable();
         animalParts_.set(index, builderForValue.build());
@@ -637,7 +637,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>repeated .slaughterhouse.AnimalPart animal_parts = 3;</code>
      */
-    public Builder addAnimalParts(via.pro3.grpc.generated.AnimalPart value) {
+    public Builder addAnimalParts(generated.AnimalPart value) {
       if (animalPartsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -654,7 +654,7 @@ private static final long serialVersionUID = 0L;
      * <code>repeated .slaughterhouse.AnimalPart animal_parts = 3;</code>
      */
     public Builder addAnimalParts(
-        int index, via.pro3.grpc.generated.AnimalPart value) {
+        int index, generated.AnimalPart value) {
       if (animalPartsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -671,7 +671,7 @@ private static final long serialVersionUID = 0L;
      * <code>repeated .slaughterhouse.AnimalPart animal_parts = 3;</code>
      */
     public Builder addAnimalParts(
-        via.pro3.grpc.generated.AnimalPart.Builder builderForValue) {
+        generated.AnimalPart.Builder builderForValue) {
       if (animalPartsBuilder_ == null) {
         ensureAnimalPartsIsMutable();
         animalParts_.add(builderForValue.build());
@@ -685,7 +685,7 @@ private static final long serialVersionUID = 0L;
      * <code>repeated .slaughterhouse.AnimalPart animal_parts = 3;</code>
      */
     public Builder addAnimalParts(
-        int index, via.pro3.grpc.generated.AnimalPart.Builder builderForValue) {
+        int index, generated.AnimalPart.Builder builderForValue) {
       if (animalPartsBuilder_ == null) {
         ensureAnimalPartsIsMutable();
         animalParts_.add(index, builderForValue.build());
@@ -699,7 +699,7 @@ private static final long serialVersionUID = 0L;
      * <code>repeated .slaughterhouse.AnimalPart animal_parts = 3;</code>
      */
     public Builder addAllAnimalParts(
-        java.lang.Iterable<? extends via.pro3.grpc.generated.AnimalPart> values) {
+        java.lang.Iterable<? extends generated.AnimalPart> values) {
       if (animalPartsBuilder_ == null) {
         ensureAnimalPartsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -739,14 +739,14 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>repeated .slaughterhouse.AnimalPart animal_parts = 3;</code>
      */
-    public via.pro3.grpc.generated.AnimalPart.Builder getAnimalPartsBuilder(
+    public generated.AnimalPart.Builder getAnimalPartsBuilder(
         int index) {
       return internalGetAnimalPartsFieldBuilder().getBuilder(index);
     }
     /**
      * <code>repeated .slaughterhouse.AnimalPart animal_parts = 3;</code>
      */
-    public via.pro3.grpc.generated.AnimalPartOrBuilder getAnimalPartsOrBuilder(
+    public generated.AnimalPartOrBuilder getAnimalPartsOrBuilder(
         int index) {
       if (animalPartsBuilder_ == null) {
         return animalParts_.get(index);  } else {
@@ -756,7 +756,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>repeated .slaughterhouse.AnimalPart animal_parts = 3;</code>
      */
-    public java.util.List<? extends via.pro3.grpc.generated.AnimalPartOrBuilder> 
+    public java.util.List<? extends generated.AnimalPartOrBuilder> 
          getAnimalPartsOrBuilderList() {
       if (animalPartsBuilder_ != null) {
         return animalPartsBuilder_.getMessageOrBuilderList();
@@ -767,31 +767,31 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>repeated .slaughterhouse.AnimalPart animal_parts = 3;</code>
      */
-    public via.pro3.grpc.generated.AnimalPart.Builder addAnimalPartsBuilder() {
+    public generated.AnimalPart.Builder addAnimalPartsBuilder() {
       return internalGetAnimalPartsFieldBuilder().addBuilder(
-          via.pro3.grpc.generated.AnimalPart.getDefaultInstance());
+          generated.AnimalPart.getDefaultInstance());
     }
     /**
      * <code>repeated .slaughterhouse.AnimalPart animal_parts = 3;</code>
      */
-    public via.pro3.grpc.generated.AnimalPart.Builder addAnimalPartsBuilder(
+    public generated.AnimalPart.Builder addAnimalPartsBuilder(
         int index) {
       return internalGetAnimalPartsFieldBuilder().addBuilder(
-          index, via.pro3.grpc.generated.AnimalPart.getDefaultInstance());
+          index, generated.AnimalPart.getDefaultInstance());
     }
     /**
      * <code>repeated .slaughterhouse.AnimalPart animal_parts = 3;</code>
      */
-    public java.util.List<via.pro3.grpc.generated.AnimalPart.Builder> 
+    public java.util.List<generated.AnimalPart.Builder> 
          getAnimalPartsBuilderList() {
       return internalGetAnimalPartsFieldBuilder().getBuilderList();
     }
     private com.google.protobuf.RepeatedFieldBuilder<
-        via.pro3.grpc.generated.AnimalPart, via.pro3.grpc.generated.AnimalPart.Builder, via.pro3.grpc.generated.AnimalPartOrBuilder> 
+        generated.AnimalPart, generated.AnimalPart.Builder, generated.AnimalPartOrBuilder> 
         internalGetAnimalPartsFieldBuilder() {
       if (animalPartsBuilder_ == null) {
         animalPartsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
-            via.pro3.grpc.generated.AnimalPart, via.pro3.grpc.generated.AnimalPart.Builder, via.pro3.grpc.generated.AnimalPartOrBuilder>(
+            generated.AnimalPart, generated.AnimalPart.Builder, generated.AnimalPartOrBuilder>(
                 animalParts_,
                 ((bitField0_ & 0x00000004) != 0),
                 getParentForChildren(),
@@ -805,12 +805,12 @@ private static final long serialVersionUID = 0L;
   }
 
   // @@protoc_insertion_point(class_scope:slaughterhouse.Tray)
-  private static final via.pro3.grpc.generated.Tray DEFAULT_INSTANCE;
+  private static final generated.Tray DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new via.pro3.grpc.generated.Tray();
+    DEFAULT_INSTANCE = new generated.Tray();
   }
 
-  public static via.pro3.grpc.generated.Tray getDefaultInstance() {
+  public static generated.Tray getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
@@ -846,7 +846,7 @@ private static final long serialVersionUID = 0L;
   }
 
   @java.lang.Override
-  public via.pro3.grpc.generated.Tray getDefaultInstanceForType() {
+  public generated.Tray getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

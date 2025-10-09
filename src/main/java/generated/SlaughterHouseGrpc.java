@@ -1,4 +1,4 @@
-package via.pro3.grpc.generated;
+package generated;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
 
@@ -12,29 +12,29 @@ public final class SlaughterHouseGrpc {
   public static final java.lang.String SERVICE_NAME = "slaughterhouse.SlaughterHouse";
 
   // Static method descriptors that strictly reflect the proto.
-  private static volatile io.grpc.MethodDescriptor<via.pro3.grpc.generated.ProductRequest,
-      via.pro3.grpc.generated.AnimalListResponse> getGetAnimalsByProductMethod;
+  private static volatile io.grpc.MethodDescriptor<generated.ProductRequest,
+      generated.AnimalListResponse> getGetAnimalsByProductMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "GetAnimalsByProduct",
-      requestType = via.pro3.grpc.generated.ProductRequest.class,
-      responseType = via.pro3.grpc.generated.AnimalListResponse.class,
+      requestType = generated.ProductRequest.class,
+      responseType = generated.AnimalListResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<via.pro3.grpc.generated.ProductRequest,
-      via.pro3.grpc.generated.AnimalListResponse> getGetAnimalsByProductMethod() {
-    io.grpc.MethodDescriptor<via.pro3.grpc.generated.ProductRequest, via.pro3.grpc.generated.AnimalListResponse> getGetAnimalsByProductMethod;
+  public static io.grpc.MethodDescriptor<generated.ProductRequest,
+      generated.AnimalListResponse> getGetAnimalsByProductMethod() {
+    io.grpc.MethodDescriptor<generated.ProductRequest, generated.AnimalListResponse> getGetAnimalsByProductMethod;
     if ((getGetAnimalsByProductMethod = SlaughterHouseGrpc.getGetAnimalsByProductMethod) == null) {
       synchronized (SlaughterHouseGrpc.class) {
         if ((getGetAnimalsByProductMethod = SlaughterHouseGrpc.getGetAnimalsByProductMethod) == null) {
           SlaughterHouseGrpc.getGetAnimalsByProductMethod = getGetAnimalsByProductMethod =
-              io.grpc.MethodDescriptor.<via.pro3.grpc.generated.ProductRequest, via.pro3.grpc.generated.AnimalListResponse>newBuilder()
+              io.grpc.MethodDescriptor.<generated.ProductRequest, generated.AnimalListResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetAnimalsByProduct"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  via.pro3.grpc.generated.ProductRequest.getDefaultInstance()))
+                  generated.ProductRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  via.pro3.grpc.generated.AnimalListResponse.getDefaultInstance()))
+                  generated.AnimalListResponse.getDefaultInstance()))
               .setSchemaDescriptor(new SlaughterHouseMethodDescriptorSupplier("GetAnimalsByProduct"))
               .build();
         }
@@ -43,29 +43,29 @@ public final class SlaughterHouseGrpc {
     return getGetAnimalsByProductMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<via.pro3.grpc.generated.AnimalRequest,
-      via.pro3.grpc.generated.ProductListResponse> getGetProductsByAnimalMethod;
+  private static volatile io.grpc.MethodDescriptor<generated.AnimalRequest,
+      generated.ProductListResponse> getGetProductsByAnimalMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "GetProductsByAnimal",
-      requestType = via.pro3.grpc.generated.AnimalRequest.class,
-      responseType = via.pro3.grpc.generated.ProductListResponse.class,
+      requestType = generated.AnimalRequest.class,
+      responseType = generated.ProductListResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<via.pro3.grpc.generated.AnimalRequest,
-      via.pro3.grpc.generated.ProductListResponse> getGetProductsByAnimalMethod() {
-    io.grpc.MethodDescriptor<via.pro3.grpc.generated.AnimalRequest, via.pro3.grpc.generated.ProductListResponse> getGetProductsByAnimalMethod;
+  public static io.grpc.MethodDescriptor<generated.AnimalRequest,
+      generated.ProductListResponse> getGetProductsByAnimalMethod() {
+    io.grpc.MethodDescriptor<generated.AnimalRequest, generated.ProductListResponse> getGetProductsByAnimalMethod;
     if ((getGetProductsByAnimalMethod = SlaughterHouseGrpc.getGetProductsByAnimalMethod) == null) {
       synchronized (SlaughterHouseGrpc.class) {
         if ((getGetProductsByAnimalMethod = SlaughterHouseGrpc.getGetProductsByAnimalMethod) == null) {
           SlaughterHouseGrpc.getGetProductsByAnimalMethod = getGetProductsByAnimalMethod =
-              io.grpc.MethodDescriptor.<via.pro3.grpc.generated.AnimalRequest, via.pro3.grpc.generated.ProductListResponse>newBuilder()
+              io.grpc.MethodDescriptor.<generated.AnimalRequest, generated.ProductListResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetProductsByAnimal"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  via.pro3.grpc.generated.AnimalRequest.getDefaultInstance()))
+                  generated.AnimalRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  via.pro3.grpc.generated.ProductListResponse.getDefaultInstance()))
+                  generated.ProductListResponse.getDefaultInstance()))
               .setSchemaDescriptor(new SlaughterHouseMethodDescriptorSupplier("GetProductsByAnimal"))
               .build();
         }
@@ -139,15 +139,15 @@ public final class SlaughterHouseGrpc {
 
     /**
      */
-    default void getAnimalsByProduct(via.pro3.grpc.generated.ProductRequest request,
-        io.grpc.stub.StreamObserver<via.pro3.grpc.generated.AnimalListResponse> responseObserver) {
+    default void getAnimalsByProduct(generated.ProductRequest request,
+        io.grpc.stub.StreamObserver<generated.AnimalListResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetAnimalsByProductMethod(), responseObserver);
     }
 
     /**
      */
-    default void getProductsByAnimal(via.pro3.grpc.generated.AnimalRequest request,
-        io.grpc.stub.StreamObserver<via.pro3.grpc.generated.ProductListResponse> responseObserver) {
+    default void getProductsByAnimal(generated.AnimalRequest request,
+        io.grpc.stub.StreamObserver<generated.ProductListResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetProductsByAnimalMethod(), responseObserver);
     }
   }
@@ -181,16 +181,16 @@ public final class SlaughterHouseGrpc {
 
     /**
      */
-    public void getAnimalsByProduct(via.pro3.grpc.generated.ProductRequest request,
-        io.grpc.stub.StreamObserver<via.pro3.grpc.generated.AnimalListResponse> responseObserver) {
+    public void getAnimalsByProduct(generated.ProductRequest request,
+        io.grpc.stub.StreamObserver<generated.AnimalListResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetAnimalsByProductMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
      */
-    public void getProductsByAnimal(via.pro3.grpc.generated.AnimalRequest request,
-        io.grpc.stub.StreamObserver<via.pro3.grpc.generated.ProductListResponse> responseObserver) {
+    public void getProductsByAnimal(generated.AnimalRequest request,
+        io.grpc.stub.StreamObserver<generated.ProductListResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetProductsByAnimalMethod(), getCallOptions()), request, responseObserver);
     }
@@ -214,14 +214,14 @@ public final class SlaughterHouseGrpc {
 
     /**
      */
-    public via.pro3.grpc.generated.AnimalListResponse getAnimalsByProduct(via.pro3.grpc.generated.ProductRequest request) throws io.grpc.StatusException {
+    public generated.AnimalListResponse getAnimalsByProduct(generated.ProductRequest request) throws io.grpc.StatusException {
       return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getGetAnimalsByProductMethod(), getCallOptions(), request);
     }
 
     /**
      */
-    public via.pro3.grpc.generated.ProductListResponse getProductsByAnimal(via.pro3.grpc.generated.AnimalRequest request) throws io.grpc.StatusException {
+    public generated.ProductListResponse getProductsByAnimal(generated.AnimalRequest request) throws io.grpc.StatusException {
       return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getGetProductsByAnimalMethod(), getCallOptions(), request);
     }
@@ -245,14 +245,14 @@ public final class SlaughterHouseGrpc {
 
     /**
      */
-    public via.pro3.grpc.generated.AnimalListResponse getAnimalsByProduct(via.pro3.grpc.generated.ProductRequest request) {
+    public generated.AnimalListResponse getAnimalsByProduct(generated.ProductRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetAnimalsByProductMethod(), getCallOptions(), request);
     }
 
     /**
      */
-    public via.pro3.grpc.generated.ProductListResponse getProductsByAnimal(via.pro3.grpc.generated.AnimalRequest request) {
+    public generated.ProductListResponse getProductsByAnimal(generated.AnimalRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetProductsByAnimalMethod(), getCallOptions(), request);
     }
@@ -276,16 +276,16 @@ public final class SlaughterHouseGrpc {
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<via.pro3.grpc.generated.AnimalListResponse> getAnimalsByProduct(
-        via.pro3.grpc.generated.ProductRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<generated.AnimalListResponse> getAnimalsByProduct(
+        generated.ProductRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetAnimalsByProductMethod(), getCallOptions()), request);
     }
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<via.pro3.grpc.generated.ProductListResponse> getProductsByAnimal(
-        via.pro3.grpc.generated.AnimalRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<generated.ProductListResponse> getProductsByAnimal(
+        generated.AnimalRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetProductsByAnimalMethod(), getCallOptions()), request);
     }
@@ -312,12 +312,12 @@ public final class SlaughterHouseGrpc {
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
         case METHODID_GET_ANIMALS_BY_PRODUCT:
-          serviceImpl.getAnimalsByProduct((via.pro3.grpc.generated.ProductRequest) request,
-              (io.grpc.stub.StreamObserver<via.pro3.grpc.generated.AnimalListResponse>) responseObserver);
+          serviceImpl.getAnimalsByProduct((generated.ProductRequest) request,
+              (io.grpc.stub.StreamObserver<generated.AnimalListResponse>) responseObserver);
           break;
         case METHODID_GET_PRODUCTS_BY_ANIMAL:
-          serviceImpl.getProductsByAnimal((via.pro3.grpc.generated.AnimalRequest) request,
-              (io.grpc.stub.StreamObserver<via.pro3.grpc.generated.ProductListResponse>) responseObserver);
+          serviceImpl.getProductsByAnimal((generated.AnimalRequest) request,
+              (io.grpc.stub.StreamObserver<generated.ProductListResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -341,15 +341,15 @@ public final class SlaughterHouseGrpc {
           getGetAnimalsByProductMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
-              via.pro3.grpc.generated.ProductRequest,
-              via.pro3.grpc.generated.AnimalListResponse>(
+              generated.ProductRequest,
+              generated.AnimalListResponse>(
                 service, METHODID_GET_ANIMALS_BY_PRODUCT)))
         .addMethod(
           getGetProductsByAnimalMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
-              via.pro3.grpc.generated.AnimalRequest,
-              via.pro3.grpc.generated.ProductListResponse>(
+              generated.AnimalRequest,
+              generated.ProductListResponse>(
                 service, METHODID_GET_PRODUCTS_BY_ANIMAL)))
         .build();
   }
@@ -360,7 +360,7 @@ public final class SlaughterHouseGrpc {
 
     @java.lang.Override
     public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
-      return via.pro3.grpc.generated.SlaughterHouseOuterClass.getDescriptor();
+      return generated.SlaughterHouseOuterClass.getDescriptor();
     }
 
     @java.lang.Override

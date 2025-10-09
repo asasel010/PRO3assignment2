@@ -1,8 +1,8 @@
-package org.example;
+package client;
 
 import io.grpc.ManagedChannel;
 import io.grpc.ManagedChannelBuilder;
-import via.pro3.grpc.generated.*;
+import generated.*;
 
 public class ClientMain {
     public static void main(String[] args)

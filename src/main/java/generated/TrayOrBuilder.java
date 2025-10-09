@@ -3,7 +3,7 @@
 // source: SlaughterHouse.proto
 // Protobuf Java Version: 4.32.0
 
-package via.pro3.grpc.generated;
+package generated;
 
 @com.google.protobuf.Generated
 public interface TrayOrBuilder extends
@@ -25,12 +25,12 @@ public interface TrayOrBuilder extends
   /**
    * <code>repeated .slaughterhouse.AnimalPart animal_parts = 3;</code>
    */
-  java.util.List<via.pro3.grpc.generated.AnimalPart> 
+  java.util.List<generated.AnimalPart> 
       getAnimalPartsList();
   /**
    * <code>repeated .slaughterhouse.AnimalPart animal_parts = 3;</code>
    */
-  via.pro3.grpc.generated.AnimalPart getAnimalParts(int index);
+  generated.AnimalPart getAnimalParts(int index);
   /**
    * <code>repeated .slaughterhouse.AnimalPart animal_parts = 3;</code>
    */
@@ -38,11 +38,11 @@ public interface TrayOrBuilder extends
   /**
    * <code>repeated .slaughterhouse.AnimalPart animal_parts = 3;</code>
    */
-  java.util.List<? extends via.pro3.grpc.generated.AnimalPartOrBuilder> 
+  java.util.List<? extends generated.AnimalPartOrBuilder> 
       getAnimalPartsOrBuilderList();
   /**
    * <code>repeated .slaughterhouse.AnimalPart animal_parts = 3;</code>
    */
-  via.pro3.grpc.generated.AnimalPartOrBuilder getAnimalPartsOrBuilder(
+  generated.AnimalPartOrBuilder getAnimalPartsOrBuilder(
       int index);
 }

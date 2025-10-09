@@ -1,8 +1,8 @@
 package service;
 
 import io.grpc.stub.StreamObserver;
-import org.example.database.DatabaseConnection;
-import via.pro3.grpc.generated.*;
+import database.DatabaseConnection;
+import generated.*;
 
 import java.util.List;
 import java.util.ArrayList;

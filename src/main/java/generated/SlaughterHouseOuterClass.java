@@ -3,7 +3,7 @@
 // source: SlaughterHouse.proto
 // Protobuf Java Version: 4.32.0
 
-package via.pro3.grpc.generated;
+package generated;
 
 @com.google.protobuf.Generated
 public final class SlaughterHouseOuterClass {
@@ -94,8 +94,8 @@ public final class SlaughterHouseOuterClass {
       "ProductRequest\032\".slaughterhouse.AnimalLi" +
       "stResponse\022Y\n\023GetProductsByAnimal\022\035.slau" +
       "ghterhouse.AnimalRequest\032#.slaughterhous" +
-      "e.ProductListResponseB\033\n\027via.pro3.grpc.g" +
-      "eneratedP\001b\006proto3"
+      "e.ProductListResponseB\r\n\tgeneratedP\001b\006pr" +
+      "oto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

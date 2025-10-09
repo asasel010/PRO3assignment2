@@ -3,7 +3,7 @@
 // source: SlaughterHouse.proto
 // Protobuf Java Version: 4.32.0
 
-package via.pro3.grpc.generated;
+package generated;
 
 @com.google.protobuf.Generated
 public interface AnimalListResponseOrBuilder extends
@@ -13,12 +13,12 @@ public interface AnimalListResponseOrBuilder extends
   /**
    * <code>repeated .slaughterhouse.Animal animals = 1;</code>
    */
-  java.util.List<via.pro3.grpc.generated.Animal> 
+  java.util.List<generated.Animal> 
       getAnimalsList();
   /**
    * <code>repeated .slaughterhouse.Animal animals = 1;</code>
    */
-  via.pro3.grpc.generated.Animal getAnimals(int index);
+  generated.Animal getAnimals(int index);
   /**
    * <code>repeated .slaughterhouse.Animal animals = 1;</code>
    */
@@ -26,11 +26,11 @@ public interface AnimalListResponseOrBuilder extends
   /**
    * <code>repeated .slaughterhouse.Animal animals = 1;</code>
    */
-  java.util.List<? extends via.pro3.grpc.generated.AnimalOrBuilder> 
+  java.util.List<? extends generated.AnimalOrBuilder> 
       getAnimalsOrBuilderList();
   /**
    * <code>repeated .slaughterhouse.Animal animals = 1;</code>
    */
-  via.pro3.grpc.generated.AnimalOrBuilder getAnimalsOrBuilder(
+  generated.AnimalOrBuilder getAnimalsOrBuilder(
       int index);
 }
