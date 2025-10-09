@@ -10,15 +10,15 @@ public class ClientMain {
                 .usePlaintext()
                 .build();
 
-/*        TextConverterGrpc.TextConverterBlockingStub stub =
-                TextConverterGrpc.newBlockingStub(channel);
+        TextConverterGrpc.TextConverterBlockingStub stub =
+              TextConverterGrpc.newBlockingStub(channel);
 
-        RequestText request = RequestText.newBuilder()
+           RequestText request = RequestText.newBuilder()
                 .setInputText("rpc with streaming based on http/2")
-                .build();
+               .build();
 
         ResponseText response = stub.toUpper(request);
-        System.out.println("Response: " + response.getOutputText());*/
+        System.out.println("Response: " + response.getOutputText());
 
         channel.shutdown();
     }

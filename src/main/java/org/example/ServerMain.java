@@ -2,7 +2,7 @@ package org.example;
 
 import io.grpc.Server;
 import io.grpc.ServerBuilder;
-import service.TextConverterImpl;
+import service.SlaughterHouseImpl;
 
 import java.io.IOException;
 
@@ -11,7 +11,7 @@ public class ServerMain {
     {
         try{
             Server server = ServerBuilder.forPort(3004)
-                    .addService(new TextConverterImpl())
+                    .addService(new SlaughterHouseImpl())
                     .build();
             server.start();
             System.out.println("Server started, listening on " + server.getPort());
