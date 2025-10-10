@@ -21,7 +21,7 @@ public class AnimalEntity implements AnimalDAO {
             ResultSet rs = statement.executeQuery();
             ArrayList<Integer> ids = new ArrayList<>();
             while(rs.next()) {
-                ids.add(rs.getInt("p.id"));
+                ids.add(rs.getInt("product_id"));
 
             }
             return ids;

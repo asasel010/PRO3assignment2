@@ -6,7 +6,7 @@ import java.util.ArrayList;
 public class ProductEntity implements ProductDAO {
 
     @Override
-    public ArrayList<Integer> readAnimalsInProduct() {
+    public ArrayList<Integer> readAnimalsInProduct(int id) {
         try(Connection connection = DatabaseConnection.getInstance().getConnection()) {
             PreparedStatement statement = connection.prepareStatement("SELECT *\n" +
                     "FROM product\n" +
@@ -15,11 +15,11 @@ public class ProductEntity implements ProductDAO {
                     "INNER JOIN slaughter_house.animal a on a.id = ap.animal_id\n" +
                     "WHERE product_id = ?;\n");
 
-            statement.setInt(1, 1);
+            statement.setInt(1, id);
             ResultSet rs = statement.executeQuery();
             ArrayList<Integer> animals = new ArrayList<>();
             while (rs.next()) {
-                animals.add(rs.getInt("a.id"));
+                animals.add(rs.getInt("animal_id"));
             }
 
             return animals;
