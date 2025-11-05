@@ -15,13 +15,13 @@ public class SlaughterHouseImpl extends SlaughterHouseGrpc.SlaughterHouseImplBas
 
         List<Animal> animals = new ArrayList<>();
         String sql = """
-            SELECT DISTINCT a.animal_id, a.registration_number, a.weight, a.type
-            FROM animals a
-            JOIN parts p ON a.animal_id = p.animal_id
-            JOIN tray_parts tp ON p.part_id = tp.part_id
-            JOIN product_trays pt ON tp.tray_id = pt.tray_id
-            WHERE pt.product_id = ?
-            """;
+            SELECT DISTINCT a.id AS animal_id, a.weight, a.type
+            FROM slaughter_house.animal a
+            JOIN slaughter_house.animal_part ap ON a.id = ap.animal_id
+            JOIN slaughter_house.product_part pp ON ap.id = pp.animal_part_id
+            WHERE pp.product_id = ?
+        """;
+
 
         try (Connection conn = DatabaseConnection.getInstance().getConnection();
              PreparedStatement statement = conn.prepareStatement(sql)) {
@@ -32,7 +32,7 @@ public class SlaughterHouseImpl extends SlaughterHouseGrpc.SlaughterHouseImplBas
             while (result.next()) {
                 Animal animal = Animal.newBuilder()
                         .setAnimalId(result.getInt("animal_id"))
-                        .setRegistrationNumber(result.getString("registration_number"))
+                        .setRegistrationNumber("")
                         .setWeight(result.getDouble("weight"))
                         .setType(result.getString("type"))
                         .build();
@@ -55,13 +55,13 @@ public class SlaughterHouseImpl extends SlaughterHouseGrpc.SlaughterHouseImplBas
 
         List<Product> products = new ArrayList<>();
         String sql = """
-            SELECT DISTINCT pr.product_id, pr.product_type, pt.tray_id
-            FROM products pr
-            JOIN product_trays pt ON pr.product_id = pt.product_id
-            JOIN tray_parts tp ON pt.tray_id = tp.tray_id
-            JOIN parts pa ON tp.part_id = pa.part_id
-            WHERE pa.animal_id = ?
-            """;
+            SELECT DISTINCT p.id AS product_id
+            FROM slaughter_house.product p
+            JOIN slaughter_house.product_part pp ON p.id = pp.product_id
+            JOIN slaughter_house.animal_part ap ON ap.id = pp.animal_part_id
+            WHERE ap.animal_id = ?
+        """;
+
 
         try (Connection conn = DatabaseConnection.getInstance().getConnection();
              PreparedStatement statement = conn.prepareStatement(sql)) {
@@ -75,10 +75,10 @@ public class SlaughterHouseImpl extends SlaughterHouseGrpc.SlaughterHouseImplBas
                 int trayId = result.getInt("tray_id");
 
                 Product product = Product.newBuilder()
-                        .setProductId(productId)
-                        .setProductType(productType)
-                        .addTrayIds(trayId)
+                        .setProductId(result.getInt("product_id"))
+                        .setProductType("")
                         .build();
+
 
                 products.add(product);
             }
