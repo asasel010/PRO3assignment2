@@ -1,41 +1,29 @@
 package service;
 
+import database.*;
 import io.grpc.stub.StreamObserver;
-import database.DatabaseConnection;
 import generated.*;
 
 import java.util.List;
 import java.util.ArrayList;
 import java.sql.*;
 
-public class SlaughterHouseImpl extends SlaughterHouseGrpc.SlaughterHouseImplBase
-{
+public class SlaughterHouseImpl extends SlaughterHouseGrpc.SlaughterHouseImplBase {
+
+    private final ProductDAO productDAO = new ProductEntity();
+    private final AnimalDAO animalDAO = new AnimalEntity();
+
+    @Override
     public void getAnimalsByProduct(ProductRequest request, StreamObserver<AnimalListResponse> responseObserver) {
-        System.out.println("Received request >>> " + request.toString());
+        System.out.println("Received getAnimalsByProduct request >>> " + request.getProductId());
 
         List<Animal> animals = new ArrayList<>();
-        String sql = """
-            SELECT DISTINCT a.id AS animal_id, a.weight, a.type
-            FROM slaughter_house.animal a
-            JOIN slaughter_house.animal_part ap ON a.id = ap.animal_id
-            JOIN slaughter_house.product_part pp ON ap.id = pp.animal_part_id
-            WHERE pp.product_id = ?
-        """;
 
+        try {
+            ArrayList<Integer> animalIds = productDAO.readAnimalsInProduct(request.getProductId());
 
-        try (Connection conn = DatabaseConnection.getInstance().getConnection();
-             PreparedStatement statement = conn.prepareStatement(sql)) {
-
-            statement.setInt(1, request.getProductId());
-            ResultSet result = statement.executeQuery();
-
-            while (result.next()) {
-                Animal animal = Animal.newBuilder()
-                        .setAnimalId(result.getInt("animal_id"))
-                        .setRegistrationNumber("")
-                        .setWeight(result.getDouble("weight"))
-                        .setType(result.getString("type"))
-                        .build();
+            for (Integer id : animalIds) {
+                Animal animal = fetchAnimalDetails(id);
                 animals.add(animal);
             }
 
@@ -50,36 +38,17 @@ public class SlaughterHouseImpl extends SlaughterHouseGrpc.SlaughterHouseImplBas
         }
     }
 
+    @Override
     public void getProductsByAnimal(AnimalRequest request, StreamObserver<ProductListResponse> responseObserver) {
-        System.out.println("Received request >>> " + request.toString());
+        System.out.println("Received getProductsByAnimal request >>> " + request.getAnimalId());
 
         List<Product> products = new ArrayList<>();
-        String sql = """
-            SELECT DISTINCT p.id AS product_id
-            FROM slaughter_house.product p
-            JOIN slaughter_house.product_part pp ON p.id = pp.product_id
-            JOIN slaughter_house.animal_part ap ON ap.id = pp.animal_part_id
-            WHERE ap.animal_id = ?
-        """;
 
+        try {
+            ArrayList<Integer> productIds = animalDAO.readProductsWithAnimal(request.getAnimalId());
 
-        try (Connection conn = DatabaseConnection.getInstance().getConnection();
-             PreparedStatement statement = conn.prepareStatement(sql)) {
-
-            statement.setInt(1, request.getAnimalId());
-            ResultSet result = statement.executeQuery();
-            
-            while (result.next()) {
-                int productId = result.getInt("product_id");
-                String productType = result.getString("product_type");
-                int trayId = result.getInt("tray_id");
-
-                Product product = Product.newBuilder()
-                        .setProductId(result.getInt("product_id"))
-                        .setProductType("")
-                        .build();
-
-
+            for (Integer id : productIds) {
+                Product product = fetchProductDetails(id);
                 products.add(product);
             }
 
@@ -93,4 +62,64 @@ public class SlaughterHouseImpl extends SlaughterHouseGrpc.SlaughterHouseImplBas
             responseObserver.onError(e);
         }
     }
+
+    private Animal fetchAnimalDetails(int animalId) throws SQLException {
+        String sql = "SELECT * FROM slaughter_house.animal WHERE id = ?";
+
+        try (Connection conn = DatabaseConnection.getInstance().getConnection();
+             PreparedStatement stmt = conn.prepareStatement(sql)) {
+
+            stmt.setInt(1, animalId);
+            ResultSet rs = stmt.executeQuery();
+
+            if (rs.next()) {
+                return Animal.newBuilder()
+                        .setAnimalId(rs.getInt("id"))
+                        .setRegistrationNumber("") //do i delete this if its not in the database?
+                        .setWeight(rs.getDouble("weight"))
+                        .setType(rs.getString("type"))
+                        .build();
+            }
+        }
+        return Animal.newBuilder()
+                .setAnimalId(animalId)
+                .setRegistrationNumber("")
+                .setWeight(0)
+                .setType("unknown")
+                .build();
+    }
+
+    private Product fetchProductDetails(int productId) throws SQLException {
+        String sql = """
+            SELECT p.id AS product_id,
+                   CASE 
+                       WHEN pkg.id IS NOT NULL THEN 'package'
+                       WHEN ha.id IS NOT NULL THEN 'half_animal'
+                       ELSE 'unknown'
+                   END AS product_type
+            FROM slaughter_house.product p
+            LEFT JOIN slaughter_house.package pkg ON pkg.id = p.id
+            LEFT JOIN slaughter_house.half_animal ha ON ha.id = p.id
+            WHERE p.id = ?
+        """;
+
+        try (Connection conn = DatabaseConnection.getInstance().getConnection();
+             PreparedStatement stmt = conn.prepareStatement(sql)) {
+
+            stmt.setInt(1, productId);
+            ResultSet rs = stmt.executeQuery();
+
+            if (rs.next()) {
+                return Product.newBuilder()
+                        .setProductId(rs.getInt("product_id"))
+                        .setProductType(rs.getString("product_type"))
+                        .build();
+            }
+        }
+        return Product.newBuilder()
+                .setProductId(productId)
+                .setProductType("unknown")
+                .build();
+    }
 }
+
