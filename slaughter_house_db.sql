@@ -8,7 +8,10 @@ CREATE SCHEMA IF NOT EXISTS slaughter_house;
 CREATE TABLE animal(
                        id SERIAL PRIMARY KEY,
                        weight int,
-                       type varchar(20)
+                       type varchar(20),
+                       registration_number varchar(100),
+                       origin varchar(100),
+                       arrived_date date
 );
 
 CREATE TABLE animal_part(
@@ -50,8 +53,8 @@ CREATE TABLE product_part(
                              animal_part_id int REFERENCES animal_part(id)
 );
 
-INSERT INTO animal VALUES (1123, 129.0, 'pig');
-INSERT INTO animal VALUES (1244, 1200.0, 'cow');
+INSERT INTO animal VALUES (1123, 130, 'pig', 'REG-PIG-1123', 'Farm A', '2025-11-01');
+INSERT INTO animal VALUES (1244, 1200, 'cow', 'REG-COW-1244', 'Farm B', '2025-10-28');
 
 INSERT INTO animal_part VALUES (1233, 58.9, 'leg', 1123);
 INSERT INTO animal_part VALUES (1243, 88.9, 'tail', 1244);

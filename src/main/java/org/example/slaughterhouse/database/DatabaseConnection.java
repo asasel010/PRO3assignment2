@@ -15,7 +15,7 @@ public class DatabaseConnection
     public Connection getConnection() throws SQLException
     {
         return DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres?currentSchema=slaughter_house",
-            "postgres", "dupa123");
+            "postgres", "admin");
     }
 
     public static DatabaseConnection getInstance() throws SQLException {
